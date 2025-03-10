@@ -69,7 +69,7 @@ The Employee Management System is a full-stack web application designed to manag
 
 ### Running the Application
 
-- **Backend:** The backend server will run on `http://localhost:5000`.
+- **Backend:** The backend server will run on `https://localhost:7206/index.html`.
 - **Frontend:** The frontend application will run on `http://localhost:4200`.
 
 ### API Endpoints
