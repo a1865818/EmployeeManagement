@@ -26,10 +26,6 @@ The Employee Management System is a full-stack web application designed to manag
 - **Language:** C#
 - **ORM:** Entity Framework Core
 
-### Testing
-- **Frontend:** Jasmine, Karma
-- **Backend:** xUnit
-
 ### Tools
 - **IDE:** Visual Studio Code, Visual Studio
 - **Version Control:** Git, GitHub
@@ -80,23 +76,6 @@ The Employee Management System is a full-stack web application designed to manag
 - **PUT /api/employees/{id}:** Update an existing employee.
 - **DELETE /api/employees/{id}:** Delete an employee.
 
-## Testing
-
-### Frontend Tests
-
-Run the following command to execute frontend tests:
-```bash
-cd frontend
-ng test
-```
-
-### Backend Tests
-
-Run the following command to execute backend tests:
-```bash
-cd backend
-dotnet test
-```
 
 ## Contributing
 
