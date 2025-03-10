@@ -1,0 +1,53 @@
+<h2 class="text-center my-5"> {{isEditing? 'Edit Employee' : 'Create Employee' }}</h2>
+
+<div class="text-center text-danger" *ngIf="errorMessage !=''">
+    {{errorMessage}}
+</div>
+
+<form *ngIf="errorMessage === '' " class="border rounded p-5 w-50 mb-5 mx-auto" (ngSubmit)="onSubmit()"
+    #employeeForm="ngForm">
+    <div class="mb-3">
+        <label class="form-label">First Name*</label>
+        <input required #firstName="ngModel" class="form-control" type="text" name="firstName"
+            [(ngModel)]="employee.firstName">
+        <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+            <div class="text-danger" *ngIf="firstName.errors?.['required']">First Name is required</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Last Name*</label>
+        <input required #lastName="ngModel" class="form-control" type="text" name="lastName"
+            [(ngModel)]="employee.lastName">
+        <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+            <div class="text-danger" *ngIf="lastName.errors?.['required']">Last Name is required</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Phone*</label>
+        <input required #phone="ngModel" class="form-control" type="phone" name="phone" [(ngModel)]="employee.phone">
+        <div *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+            <div class="text-danger" *ngIf="phone.errors?.['required']">Phone is required</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email*</label>
+        <input required email #email="ngModel" class="form-control" type="email" name="email"
+            [(ngModel)]="employee.email">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div class="text-danger" *ngIf="email.errors?.['required']">Email is required</div>
+            <div class="text-danger" *ngIf="email.errors?.['email']">Email is invalid</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Position*</label>
+        <input required #position="ngModel" class="form-control" type="text" name="position"
+            [(ngModel)]="employee.position">
+        <div *ngIf="position.invalid && (position.dirty || position.touched)">
+            <div class="text-danger" *ngIf="position.errors?.['required']">Position is required</div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="employeeForm.invalid">{{isEditing? 'Edit' : 'Create' }}
+
+    </button>
+</form>
