@@ -48,7 +48,7 @@ The Employee Management System is a full-stack web application designed to manag
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/employee-management-system.git
+    git clone https://github.com/a1865818/employee-management-system.git
     cd employee-management-system
     ```
 
